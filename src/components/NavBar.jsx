@@ -35,10 +35,10 @@ const NavBar = () => {
         <ul className='hidden md:flex'>
          {links.map(({id, link})=>(
       <li key={id} 
-      className=' px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200 '>
+      className='px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200 '>
          
-          <Link to={Link} smooth duration={500}> 
-          {Link}
+          <Link to={link} smooth duration={500}> 
+          {link}
            </Link>
            </li>
          ))}  
@@ -58,8 +58,8 @@ const NavBar = () => {
         key={id} 
           className='px-4 cursor-pointer capitalize py-6 text-4xl'>
           
-          <Link to={Link} smooth duration={500 }> 
-          {Link} 
+          <Link to={link} smooth duration={500 }> 
+          {link} 
           </Link>
            </li>
          ))}

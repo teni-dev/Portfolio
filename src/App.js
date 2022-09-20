@@ -5,11 +5,6 @@ import NavBar from "./components/NavBar";
 import Contact from "./components/Contact";
 import SocialLinks from "./components/SocialLinks";
 
-
- 
-
- 
-
 function App() {
   return (
     <div>
@@ -18,12 +13,7 @@ function App() {
       <About />
       <Experience />
       <Contact />
-   
-
-
-
-       <SocialLinks />
-     
+      <SocialLinks />
     </div>
   );
 }
