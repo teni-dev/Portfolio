@@ -1,78 +1,27 @@
-import React from 'react';
-import {FaLinkedin} from 'react-icons/fa';
-import {SiTwitter} from 'react-icons/si';
-import { HiOutlineMail } from 'react-icons/hi';
+import EmailIcon from "@mui/icons-material/Email";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import { blue, grey } from "@mui/material/colors";
 
-const SocialLinks  = () => {
 
-const links =[
-    {
-        id: 1,
-        child: (
-            <> Linkedin<FaLinkedin size={30} /></>
-        ),
-        
-        href: "https://linkedin.com",
-        style: "rounded-tr-md"
-    },
-    {
-        id: 2,
-        child: (
-            <>
-            Twitter <SiTwitter size={30} />
-            </>
-        ),
-        href: "https://twitter.com/teni_adee ",
-        
-    },
-    {
-        id: 3,
-        child: (
-            <>
-            Mail<HiOutlineMail size={30} />
-            </>
-        ),
-        href: "mailto:oluwateniolaoyelakin1@gmail.com ",
-        style:"rounded-br-md"
-        
-    }
-]
-
+export default function SocialLinks() {
   return (
-    <div className=" hidden lg:flex flex-col top-[35%] left-0 fixed">1
-    <ul>
-
-        {links.map((id, child, href, style) =>(
-             <li key={id} className={'flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-500' + " " + style}>
-             
-             <a 
-               href={href}
-                className="flex justify-between items-center w-full text-white  " 
-                  target="_blank"
-                  rel='noreferrer' 
-                  > 
-                 
-
-                 {child}
-                 </a>
-         </li>
-
-        ))}
-
-
-
-        
-    </ul>
+    <div>
+        <div className="flex justify-center p-3 space-x-10 ">
+            <a href="mailto:oluwateniolaoyelakin1@gmail.com" target="_blank" rel="noreferrer">
+                <EmailIcon fontSize="large" style={{ color: grey[600] }} />
+            </a>
+            <a href="https://twitter.com/teni_adee" target="_blank" rel="noreferrer">
+                <TwitterIcon fontSize="large" style={{ color: blue[400] }} />
+            </a>
+            <a href="https://www.linkedin.com/in/oluwateniola-oyelakin-b95a9021a/" target="_blank" rel="noreferrer">
+                <LinkedInIcon fontSize="large" style={{ color: blue[700] }} />
+            </a>
+        </div>
+        <div className="flex justify-center font-semibold bg-slate-300">
+            @2022 Teniola Oyelakin. All rights reserved.
+        </div>
     </div>
-  )
+    
+  );
 }
-
-
-
-    
-    
-
-
-
-
-export default SocialLinks;

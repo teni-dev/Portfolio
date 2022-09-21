@@ -1,5 +1,6 @@
 import React, {useState } from "react";
-import {FaBars, FaTimes} from 'react-icons/fa';
+import CancelIcon from '@mui/icons-material/Cancel';
+import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-scroll';
 
 
@@ -35,10 +36,10 @@ const NavBar = () => {
         <ul className='hidden md:flex'>
          {links.map(({id, link})=>(
       <li key={id} 
-      className=' px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200 '>
+      className='px-4 cursor-pointer capitalize font-medium text-white hover:scale-105 duration-200 '>
          
-          <Link to={Link} smooth duration={500}> 
-          {Link}
+          <Link to={link} smooth duration={500}> 
+          {link}
            </Link>
            </li>
          ))}  
@@ -48,7 +49,7 @@ const NavBar = () => {
         onClick={() => setNav(!nav)} 
         className='cursor-pointer pr-4 z-10 text-gray-500 md:hidden'>
           
-          {nav ? <FaTimes size={30} /> : <FaBars size={30} />} 
+          {nav ? <CancelIcon size={30} /> : <MenuIcon size={30} />} 
         </div>
   
      {nav && (
@@ -58,8 +59,8 @@ const NavBar = () => {
         key={id} 
           className='px-4 cursor-pointer capitalize py-6 text-4xl'>
           
-          <Link to={Link} smooth duration={500 }> 
-          {Link} 
+          <Link to={link} smooth duration={500 }> 
+          {link} 
           </Link>
            </li>
          ))}
